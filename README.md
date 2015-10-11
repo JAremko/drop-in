@@ -1,0 +1,2 @@
+# drop-in
+Remote workspace
