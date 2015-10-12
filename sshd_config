@@ -9,9 +9,6 @@ RSAAuthentication yes
 AuthorizedKeysFile	.ssh/authorized_keys
 #SyslogFacility AUTHPRIV
 ChallengeResponseAuthentication no
-GSSAPIAuthentication yes
-GSSAPICleanupCredentials yes
-UsePAM yes
 
 Compression yes
 GatewayPorts yes

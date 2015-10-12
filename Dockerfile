@@ -34,5 +34,5 @@ RUN rc-update add sshd                                                          
 #              ssh  mosh
 EXPOSE 80 8080 2222 60001/udp
 
-ENTRYPOINT  ["/usr/bin/fish"]
+ENTRYPOINT  ["/bin/sh"]
 CMD  ["/usr/sbin/sshd", "-D"]
