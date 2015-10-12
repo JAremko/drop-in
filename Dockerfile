@@ -15,7 +15,7 @@ RUN apk add --update tmux git curl bash fish docker mosh-server htop python py-p
 
     curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish                              && \ 
     echo "/usr/bin/fish" >> /etc/shells                                                                 && \
-    sed -i 's/\/bin\/ash/\/usr\/bin\/fish/g' /etc/passwd                                                && \
+    sed -i 's/0:0:root:\/root:\/bin\/ash/0:0:root:\/home\/developer:\/usr\/bin\/fish/g' /etc/passwd     && \
     echo "alias ed='sh /usr/local/bin/run'" >> /home/developer/.config/fish/config.fish                 && \
     fish -c "omf theme bobthefish"                                                                      && \
 
