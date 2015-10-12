@@ -15,7 +15,6 @@ RUN apk add --update tmux git curl bash fish docker mosh-server htop python py-p
       --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community                     && \
 
     sed -i 's/0:0:root:\/root:\/bin\/ash/0:0:root:\/home\/developer:\/usr\/bin\/fish/g' /etc/passwd     && \
-    cp /root/* /home/developer/                                                                         && \ 
 
     curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish                              && \ 
     echo "/usr/bin/fish" >> /etc/shells                                                                 && \
