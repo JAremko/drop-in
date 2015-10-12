@@ -2,11 +2,9 @@ Port 2222
 #ListenAddress 0.0.0.0
 
 Protocol 2
-AllowUsers root
-AllowGroups root
 AllowTcpForwarding yes
 RSAAuthentication yes
-AuthorizedKeysFile	.ssh/authorized_keys
+AuthorizedKeysFile /home/developer/.ssh/authorized_keys
 #SyslogFacility AUTHPRIV
 ChallengeResponseAuthentication no
 

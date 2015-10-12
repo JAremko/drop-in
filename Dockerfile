@@ -7,7 +7,7 @@ ENV HOME /home/developer
 ENV DISABLE "'vim-airline'"
 
 COPY sshd_config /etc/ssh/sshd_config
-ADD https://github.com/jaremko.keys /data/.ssh/authorized_keys
+ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys
 
 RUN apk add --update tmux git curl bash fish docker mosh-server htop python py-pip openssh                 \
       --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community                     && \
@@ -34,5 +34,5 @@ RUN rc-update add sshd                                                          
 #              ssh  mosh
 EXPOSE 80 8080 2222 60001/udp
 
-ENTRYPOINT  ["/bin/sh"]
-CMD  ["/usr/sbin/sshd", "-D"]
+ENTRYPOINT ["/usr/sbin/sshd", "-D"]
+
