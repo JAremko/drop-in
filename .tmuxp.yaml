@@ -1,0 +1,16 @@
+session_name: main
+start_directory: '~'
+windows:
+  - window_name: editor
+    panes:
+      - focus: true
+      - shell_command:
+        - vim
+      - shell_command:
+        - cd /home/developer
+  - window_name: docker
+    panes:
+      - shell_command:
+        - htop
+      - shell_command:
+        - docker stats (docker ps -aq)

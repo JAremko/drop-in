@@ -6,8 +6,8 @@ ENV TERM screen-256color
 ENV HOME /home/developer
 
 COPY sshd_config /etc/ssh/sshd_config
-
 COPY init-vim.sh /tmp/init-vim.sh
+COPY .tmuxp.yaml  /home/developer/.tmuxp.yaml
 
 ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys
 
@@ -38,4 +38,4 @@ RUN rc-update add sshd                                                          
 #              ssh   mosh
 EXPOSE 80 8080 62222 60001/udp
 
-ENTRYPOINT ["/usr/sbin/sshd", "-Ded"]
+ENTRYPOINT ["/usr/sbin/sshd", "-De"]
