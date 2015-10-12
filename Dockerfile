@@ -35,7 +35,7 @@ RUN rc-update add sshd                                                          
     /etc/init.d/sshd start                                                                              && \
     /etc/init.d/sshd stop
 
-#                 mosh
-EXPOSE 80 8080 22 60001/udp
+#              ssh   mosh
+EXPOSE 80 8080 62222 60001/udp
 
 ENTRYPOINT ["/usr/sbin/sshd", "-Ded"]
