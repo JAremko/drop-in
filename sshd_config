@@ -22,6 +22,7 @@ PrintLastLog yes
 PrintMotd no
 PubkeyAuthentication yes
 StrictModes yes
+
 #Subsystem	sftp	/usr/libexec/openssh/sftp-server
 TCPKeepAlive no
 UseDNS yes
