@@ -32,8 +32,8 @@ COPY tmux.conf /home/developer/.tmux.conf
 RUN rc-update add sshd                                                                                  && \
     rc-status                                                                                           && \
     touch /run/openrc/softlevel                                                                         && \
-    /etc/init.d/sshd start                                                                              && \
-    /etc/init.d/sshd stop
+    /etc/init.d/sshd start > /dev/null 2>&1                                                             && \
+    /etc/init.d/sshd stop > /dev/null 2>&1
 
 #              ssh   mosh
 EXPOSE 80 8080 62222 60001/udp
