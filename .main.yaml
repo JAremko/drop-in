@@ -1,18 +1,18 @@
 session_name: main
 start_directory: '~'
-shell_command_before: "set TERM screen-256color; set HOME /home/developer; set GOPATH /home/developer/workspace; set GOROOT /usr/lib/go; set GOBIN $GOROOT/bin; set PATH $PATH $GOBIN $GOPATH/bin $NODEBIN; clear"
+shell_command_before: 'set TERM screen-256color'
 windows:
-  - window_name: editor
-    layout: main-horizontal
-    options:
-      main-pane-height: 40  
-    panes:
-      - shell_command: vim
-      - shell_command: cd ~
-  - window_name: stat
-    layout: main-horizontal
-    options:
-      main-pane-height: 10
-    panes:
-      - shell_command: htop
-      - shell_command: docker stats (docker ps -aq)
+- window_name: editor
+  layout: main-horizontal
+  options:
+    main-pane-height: 40  
+  panes:
+    - shell_command: vim
+    - shell_command: cd ~
+- window_name: stats
+  layout: main-horizontal
+  options:
+    main-pane-height: 10
+  panes:
+    - shell_command: htop
+    - shell_command: docker stats (docker ps -aq)
