@@ -6,7 +6,7 @@
 
 #### What's inside:
   - [`Alpine Linux`](http://www.alpinelinux.org/)
-  - [`Vim`](http://www.vim.org/) + a ton of awesome plugins *see [`jare/vim-bundle`](https://hub.docker.com/r/jare/vim-bundle/)*
+  - [`Vim`](http://www.vim.org/) + a ton of awesome plugins *see [`jare/vim-bundle:latest`](https://hub.docker.com/r/jare/vim-bundle/)*
   - Good support of [`Golang`](https://golang.org/) and [`TypeScript`](http://www.typescriptlang.org/) development with [`jare/typescript`](https://hub.docker.com/r/jare/typescript/) and [`jare/go-tools`](https://hub.docker.com/r/jare/go-tools/) containers
   - [`tmux`](https://tmux.github.io/)
   - [`Fish`](http://fishshell.com/)
