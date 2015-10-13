@@ -65,5 +65,6 @@ docker run -v $('pwd'):/home/developer/workspace \
   -d -p 80:80 -p 8080:8080 -p 62222:62222 -p 60001:60001/udp \
   --name drop-in jare/drop-in
 echo 'Done!'
-```  
-Don't forget to replace `ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys` in the [Dockerfile](https://hub.docker.com/r/jare/drop-in/~/dockerfile/) with your key or mount it `-v <your-key>:/home/developer/.ssh/authorized_keys`
+```    
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+*Don't forget to replace `ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys` in the [Dockerfile](https://hub.docker.com/r/jare/drop-in/~/dockerfile/) with your key or mount it `-v <your-key>:/home/developer/.ssh/authorized_keys`*
