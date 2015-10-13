@@ -11,7 +11,7 @@ COPY .tmuxp.yaml  /home/developer/.tmuxp.yaml
 
 ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys
 
-RUN apk add --update tmux git curl bash fish docker mosh-server htop python py-pip openssh                 \
+RUN apk add --update tmux git curl bash fish docker mosh-server htop python py-pip openssh python-tests    \
       --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community                     && \
 
     sed -i 's/0:0:root:\/root:\/bin\/ash/0:0:root:\/home\/developer:\/usr\/bin\/fish/g' /etc/passwd     && \
