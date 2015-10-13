@@ -11,7 +11,7 @@ COPY .tmuxp.yaml  /home/developer/.tmuxp.yaml
 
 ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys
 
-RUN apk add --update tmux git curl bash fish docker mosh-server htop python py-pip openssh python-tests    \
+RUN apk add --update tmux git curl fish docker bash mosh-server htop python py-pip openssh python-tests    \
       --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community                     && \
 
     sed -i 's/0:0:root:\/root:\/bin\/ash/0:0:root:\/home\/developer:\/usr\/bin\/fish/g' /etc/passwd     && \
@@ -29,11 +29,18 @@ RUN apk add --update tmux git curl bash fish docker mosh-server htop python py-p
 
 COPY tmux.conf /home/developer/.tmux.conf
 
-RUN rc-update add sshd                                                                                  && \
-    rc-status                                                                                           && \
-    touch /run/openrc/softlevel                                                                         && \
-    /etc/init.d/sshd start > /dev/null 2>&1                                                             && \
+RUN rc-update add sshd                        && \
+    rc-status                                 && \
+    touch /run/openrc/softlevel               && \
+    /etc/init.d/sshd start > /dev/null 2>&1   && \
     /etc/init.d/sshd stop > /dev/null 2>&1
+
+RUN echo "set shell=/bin/bash" >> /home/developer/.vimrc~                   && \
+    echo "GOPATH=/home/developer/workspace" >> /home/developer/.bashrc      && \
+    echo "GOROOT=/usr/lib/go" >> /home/developer/.bashrc                    && \
+    echo "GOBIN=$GOROOT/bin" >> /home/developer/.bashrc                     && \
+    echo "NODEBIN=/usr/lib/node_modules/bin" >> /home/developer/.bashrc     && \
+    echo "PATH=$PATH:$GOBIN:$GOPATH/bin:$NODEBIN" >> /home/developer/.bashrc 
 
 #              ssh   mosh
 EXPOSE 80 8080 62222 60001/udp
