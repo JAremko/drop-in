@@ -2,7 +2,7 @@
 `jare/drop-in:latest`   
 [![jare/drop-in:latest](https://badge.imagelayers.io/jare/drop-in:latest.svg)](https://imagelayers.io/?images=jare/drop-in:latest 'jare/drop-in:latest')  
 
-![](http://i.imgur.com/RVTlBBO.png)
+[![](http://i.imgur.com/RVTlBBO.png)](http://i.imgur.com/RVTlBBO.png)
 
 #### What's inside:
   - [`Alpine Linux`](http://www.alpinelinux.org/)
