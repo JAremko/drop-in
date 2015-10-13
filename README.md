@@ -39,7 +39,7 @@
 ```bash
 #!/bin/bash
 ip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' drop-in)
-mosh --ssh="ssh -p 62222" -- root@$ip tmuxp
+mosh --ssh="ssh -p 62222" -- root@$ip
 ```  
 ###### **start the daemon(and all containers)**
 ```bash
