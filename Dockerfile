@@ -7,7 +7,7 @@ ENV HOME /home/developer
 
 COPY sshd_config /etc/ssh/sshd_config
 COPY init-vim.sh /tmp/init-vim.sh
-COPY .main.yaml  /home/developer/.tmuxp.yaml
+COPY .main.yaml  /home/developer/.main.yaml
 
 ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys
 
