@@ -35,11 +35,11 @@ RUN rc-update add sshd                        && \
     /etc/init.d/sshd start > /dev/null 2>&1   && \
     /etc/init.d/sshd stop > /dev/null 2>&1
 
-RUN echo "set shell=/bin/bash" >> /home/developer/.vimrc~                   && \
-    echo "GOPATH=/home/developer/workspace" >> /home/developer/.bashrc      && \
-    echo "GOROOT=/usr/lib/go" >> /home/developer/.bashrc                    && \
-    echo "GOBIN=$GOROOT/bin" >> /home/developer/.bashrc                     && \
-    echo "NODEBIN=/usr/lib/node_modules/bin" >> /home/developer/.bashrc     && \
+RUN echo "set shell=/bin/bash" >> /home/developer/.vimrc~                     && \
+    echo "GOPATH=/home/developer/workspace" >> /home/developer/.bashrc        && \
+    echo "GOROOT=/usr/lib/go" >> /home/developer/.bashrc                      && \
+    echo "GOBIN=$GOROOT/bin" >> /home/developer/.bashrc                       && \
+    echo "NODEBIN=/usr/lib/node_modules/bin" >> /home/developer/.bashrc       && \
     echo "PATH=$PATH:$GOBIN:$GOPATH/bin:$NODEBIN" >> /home/developer/.bashrc 
 
 #              ssh   mosh
