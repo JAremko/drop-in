@@ -8,7 +8,7 @@ windows:
     main-pane-height: 40  
   panes:
     - shell_command: vim
-    - shell_command: cd ~
+    - shell_command: cd ~/workspace/
 - window_name: stats
   layout: main-horizontal
   options:
