@@ -13,7 +13,7 @@
   - [`powerline`](https://github.com/powerline/powerline)
   - [`Mosh`](https://mosh.mit.edu/)
   - Docker client for doing stuff with `-v /var/run/docker.sock:/var/run/docker.sock`
-  - Other stuff like OpenSSH, Bash etc.
+  - OpenSSH, Bash, OMF, Python, Node.js etc.
   
 #### how to start the daemon*(and all containers)*
 ```sh
