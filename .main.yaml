@@ -1,6 +1,6 @@
 session_name: main
 start_directory: '~'
-shell_command_before: "set TERM screen-256color"
+shell_command_before: "set TERM screen-256color; set HOME /home/developer; set GOPATH /home/developer/workspace; set GOROOT /usr/lib/go; set GOBIN $GOROOT/bin; set PATH $PATH $GOBIN $GOPATH/bin $NODEBIN"
 windows:
   - window_name: editor
     layout: main-horizontal
