@@ -1,0 +1,18 @@
+session_name: main
+start_directory: '~'
+shell_command_before: "set TERM screen-256color"
+windows:
+  - window_name: editor
+    layout: main-horizontal
+    options:
+      main-pane-height: 40  
+    panes:
+      - shell_command: vim
+      - shell_command: cd ~
+  - window_name: stat
+    layout: main-horizontal
+    options:
+      main-pane-height: 10
+    panes:
+      - shell_command: htop
+      - shell_command: docker stats (docker ps -aq)
