@@ -13,7 +13,7 @@
   - [`powerline`](https://github.com/powerline/powerline)
   - [`Mosh`](https://mosh.mit.edu/)
   - Docker client for doing stuff with `-v /var/run/docker.sock:/var/run/docker.sock`
-  - OpenSSH, Bash, OMF, Python, Node.js etc.
+  - OpenSSH, Bash, OMF, Python, etc.
   
 #### how to start the daemon*(and all containers)*
 ```sh
@@ -32,7 +32,7 @@
 #### how to connect:  
   `mosh --ssh="ssh -p 62222" -- root@$<ip>`  
   
-###### Then you can start some tmuxp session like this `tmuxp load .main.yaml` - [*tmuxp* examples](http://tmuxp.readthedocs.org/en/latest/examples.html)
+###### Then you can start [main](https://github.com/JAremko/drop-in/blob/master/.main.yaml) tmuxp session like this `tmuxp load .main.yaml` - [*tmuxp* examples](http://tmuxp.readthedocs.org/en/latest/examples.html)
 
 #### Useful Bash scripts
 ###### **Connect**
