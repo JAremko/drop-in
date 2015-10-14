@@ -16,8 +16,9 @@ RUN apk add --update tmux git curl fish docker bash mosh-server htop python py-p
 
     sed -i 's/0:0:root:\/root:\/bin\/ash/0:0:root:\/home\/developer:\/usr\/bin\/fish/g' /etc/passwd     && \
 
-    curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish                              && \ 
+    curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish                              && \
     echo "/usr/bin/fish" >> /etc/shells                                                                 && \
+    touch /home/developer/.config/fish/config.fish                                                      && \
     fish -c "omf theme bobthefish"                                                                      && \
 
     pip install git+git://github.com/Lokaltog/powerline                                                 && \
