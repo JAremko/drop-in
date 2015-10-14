@@ -18,8 +18,7 @@ RUN apk add --update tmux git curl fish docker bash mosh-server htop python py-p
 
     curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish                              && \
     echo "/usr/bin/fish" >> /etc/shells                                                                 && \
-    touch /home/developer/.config/fish/config.fish                                                      && \
-    fish -c "omf theme bobthefish"                                                                      && \
+    fish -c "omf install bobthefish"                                                                    && \
 
     pip install git+git://github.com/Lokaltog/powerline                                                 && \
     echo "set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim/" >> /home/developer/.vimrc~ && \
