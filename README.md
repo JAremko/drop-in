@@ -32,7 +32,7 @@
 #### how to connect:  
   `mosh --ssh="ssh -p 62222" -- root@$<ip>`  
   
-###### Then you can start [main](https://github.com/JAremko/drop-in/blob/master/.main.yaml) tmuxp session like this `tmuxp load .main.yaml` - [*tmuxp* examples](http://tmuxp.readthedocs.org/en/latest/examples.html)
+###### Then you can start [`main`](https://github.com/JAremko/drop-in/blob/master/.main.yaml) tmuxp session like this `tmuxp load .main.yaml` - [*tmuxp* examples](http://tmuxp.readthedocs.org/en/latest/examples.html)
 
 #### Useful Bash scripts
 ###### **Connect**
