@@ -20,6 +20,7 @@ RUN apk add --update tmux git curl fish docker bash mosh-server htop python py-p
     echo "/usr/bin/fish" >> /etc/shells                                                                 && \
     fish -c "omf install bobthefish"                                                                    && \
 
+    rm -rf /home/developer/bundle/vim-airline                                                           && \
     pip install git+git://github.com/Lokaltog/powerline                                                 && \
     echo "set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim/" >> /home/developer/.vimrc~ && \
     pip install tmuxp                                                                                   && \
