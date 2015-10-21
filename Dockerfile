@@ -24,6 +24,7 @@ RUN apk add --update tmux git curl fish docker bash mosh-server htop python py-p
     pip install git+git://github.com/Lokaltog/powerline                                                 && \
     echo "set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim/" >> /home/developer/.vimrc~ && \
     pip install tmuxp                                                                                   && \
+    echo "set shell=/bin/bash" >> /home/developer/.vimrc~                                               && \
     sh /tmp/init-vim.sh                                                                                 && \
     sh /util/ocd-clean / 
 
@@ -35,12 +36,11 @@ RUN rc-update add sshd                        && \
     /etc/init.d/sshd start > /dev/null 2>&1   && \
     /etc/init.d/sshd stop > /dev/null 2>&1
 
-RUN echo "set shell=/bin/bash" >> /home/developer/.vimrc~                            && \
-    echo "export GOPATH=/home/developer/workspace" >> /home/developer/.bashrc        && \
-    echo "export GOROOT=/usr/lib/go" >> /home/developer/.bashrc                      && \
-    echo "export GOBIN=$GOROOT/bin" >> /home/developer/.bashrc                       && \
-    echo "export NODEBIN=/usr/lib/node_modules/bin" >> /home/developer/.bashrc       && \
-    echo "export PATH=$PATH:$GOBIN:$GOPATH/bin:$NODEBIN" >> /home/developer/.bashrc 
+RUN echo "export GOPATH=/home/developer/workspace" >> /home/developer/.profile        && \
+    echo "export GOROOT=/usr/lib/go" >> /home/developer/.profile                      && \
+    echo "export GOBIN=$GOROOT/bin" >> /home/developer/.profile                       && \
+    echo "export NODEBIN=/usr/lib/node_modules/bin" >> /home/developer/.profile       && \
+    echo "export PATH=$PATH:$GOBIN:$GOPATH/bin:$NODEBIN" >> /home/developer/.profile 
 
 RUN echo "set HOME /home/developer" >> /home/developer/.config/fish/config.fish                 && \
     echo "set GOPATH /home/developer/workspace" >> /home/developer/.config/fish/config.fish     && \
