@@ -50,7 +50,8 @@ RUN echo "set -x HOME /home/developer" >> /home/developer/.config/fish/config.fi
     echo "set -x GOBIN $GOROOT/bin" >> /home/developer/.config/fish/config.fish                 && \
     echo "set -x NODEBIN /usr/lib/node_modules/bin" >> /home/developer/.config/fish/config.fish && \
     echo "set --universal fish_user_paths $fish_user_paths $GOBIN $GOPATH/bin $NODEBIN"            \
-      >> /home/developer/.config/fish/config.fish 
+      >> /home/developer/.config/fish/config.fish                                               && \
+   fish -c source /home/developer/.config/fish/config.fish
 
 #              ssh   mosh
 EXPOSE 80 8080 62222 60001/udp
