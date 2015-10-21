@@ -40,7 +40,8 @@ RUN echo "export GOPATH=/home/developer/workspace" >> /home/developer/.profile  
     echo "export GOROOT=/usr/lib/go" >> /home/developer/.profile                      && \
     echo "export GOBIN=$GOROOT/bin" >> /home/developer/.profile                       && \
     echo "export NODEBIN=/usr/lib/node_modules/bin" >> /home/developer/.profile       && \
-    echo "export PATH=$PATH:$GOBIN:$GOPATH/bin:$NODEBIN" >> /home/developer/.profile 
+    echo "export PATH=$PATH:$GOBIN:$GOPATH/bin:$NODEBIN" >> /home/developer/.profile  && \
+    echo "source /home/developer/.profile" >> /home/developer/.bashrc
 
 RUN echo "set HOME /home/developer" >> /home/developer/.config/fish/config.fish                 && \
     echo "set GOPATH /home/developer/workspace" >> /home/developer/.config/fish/config.fish     && \
