@@ -53,4 +53,11 @@ RUN echo "set HOME /home/developer" >> /home/developer/.config/fish/config.fish 
 #              ssh   mosh
 EXPOSE 80 8080 62222 60001/udp
 
+ENV GOPATH /home/developer/workspace
+ENV GOROOT /usr/lib/go
+ENV GOBIN $GOROOT/bin
+ENV NODEBIN /usr/lib/node_modules/bin
+ENV PATH $PATH:$GOBIN:$GOPATH/bin:$NODEBIN
+ENV HOME /home/developer
+
 ENTRYPOINT ["/usr/sbin/sshd", "-De"]
