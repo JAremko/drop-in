@@ -15,7 +15,7 @@
   - Docker client for doing stuff with `-v /var/run/docker.sock:/var/run/docker.sock`
   - OpenSSH, Bash, OMF, Python, etc.
 
-*The Tmux prefix is `C-q` other than that both Tmux and Vim binding are mostly default*  
+*The Tmux prefix is `C-q` other than that both Tmux and Vim binding are mostly default [`.vimrc`](https://github.com/JAremko/alpine-vim/blob/master/.vimrc) [`tmux.conf`](https://github.com/JAremko/drop-in/blob/master/tmux.conf)*  
 #### how to start the daemon*(and all containers)*
 ```sh
   docker create -v '/usr/lib/go' --name go-tools \
