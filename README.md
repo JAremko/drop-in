@@ -14,7 +14,8 @@
   - [`Mosh`](https://mosh.mit.edu/)
   - Docker client for doing stuff with `-v /var/run/docker.sock:/var/run/docker.sock`
   - OpenSSH, Bash, OMF, Python, etc.
-  
+
+*The Tmux prefix is `C-q` other than they both Tmux and Vim plugins binding are mostly default*  
 #### how to start the daemon*(and all containers)*
 ```sh
   docker create -v '/usr/lib/go' --name go-tools \
