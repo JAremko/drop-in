@@ -66,6 +66,9 @@ docker run -v $('pwd'):/home/developer/workspace \
   --volumes-from vim-go-tools --volumes-from vim-typescript \
   -v /etc/localtime:/etc/localtime:ro \
   -v /var/run/docker.sock:/var/run/docker.sock \
+  -e "GEMAIL=<github email>" \
+  -e "GNAME=<github name>" \
+  -v <id_rsa for github>:/home/developer/.ssh/id_rsa:ro \
   -d -p 80:80 -p 8080:8080 -p 62222:62222 -p 60001:60001/udp \
   --name drop-in jare/drop-in
 echo 'Done!'
