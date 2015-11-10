@@ -63,4 +63,5 @@ ENV NODEBIN /usr/lib/node_modules/bin
 ENV PATH $PATH:$GOBIN:$GOPATH/bin:$NODEBIN
 ENV HOME /home/developer
 
-ENTRYPOINT ["/usr/sbin/sshd", "-De"]
+COPY start.bash /usr/local/bin/start.bash
+ENTRYPOINT ["bash", "/usr/local/bin/start.bash"]
