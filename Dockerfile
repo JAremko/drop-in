@@ -24,6 +24,7 @@ RUN apk add --update tmux git curl fish docker bash mosh-server htop python py-p
     pip install git+git://github.com/Lokaltog/powerline                                                 && \
     echo "set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim/" >> /home/developer/.vimrc~ && \
     pip install tmuxp                                                                                   && \
+    git clone https://github.com/tmux-plugins/tmux-yank.git /home/developer/.tmux/tmux-yank             && \
     echo "set shell=/bin/bash" >> /home/developer/.vimrc~                                               && \
     sh /tmp/init-vim.sh                                                                                 && \
     sh /util/ocd-clean / 
