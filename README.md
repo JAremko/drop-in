@@ -74,5 +74,5 @@ docker run -v $('pwd'):/home/developer/workspace \
 echo 'Done!'
 ```    
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-* If Vim or Powerline doesn't look right in the tmux try `tmux -2` and make sure that client's `TERM` variable set to support 256 colors
-*Don't forget to replace `ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys` in the [Dockerfile](https://hub.docker.com/r/jare/drop-in/~/dockerfile/) with your key or mount it `-v <your-key>:/home/developer/.ssh/authorized_keys`*
+  - *If Vim or Powerline doesn't look right in the tmux try `tmux -2` and make sure that client's `TERM` variable set to support 256 colors  
+  - *Don't forget to replace `ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys` in the [Dockerfile](https://hub.docker.com/r/jare/drop-in/~/dockerfile/) with your key or mount it `-v <your-key>:/home/developer/.ssh/authorized_keys`*
