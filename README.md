@@ -4,6 +4,12 @@
 
 [![](http://i.imgur.com/RVTlBBO.png)](http://i.imgur.com/RVTlBBO.png)
 
+#### [Based on the `jare/vim-bundle:latest`](https://hub.docker.com/r/jare/vim-bundle/)   
+[![jare/vim-bundle:latest](https://badge.imagelayers.io/jare/vim-bundle:latest.svg)](https://imagelayers.io/?images=jare/vim-bundle:latest 'jare/vim-bundle:latest') - *uncompressed size*
+[![](http://i.imgur.com/G6KybVM.png)](http://i.imgur.com/G6KybVM.png) 
+
+#### [Also you might want to look at Vim/Emacs hybrid `jare/spacemacs` *(WIP)*](https://hub.docker.com/r/jare/spacemacs/)    [![](http://i.imgur.com/PjGF8iY.png)](http://i.imgur.com/PjGF8iY.png) 
+
 #### What's inside:
   - [`Alpine Linux`](http://www.alpinelinux.org/)
   - [`Vim`](http://www.vim.org/) + a ton of awesome plugins *see [`jare/vim-bundle:latest`](https://hub.docker.com/r/jare/vim-bundle/)*
