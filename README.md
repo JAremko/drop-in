@@ -8,7 +8,7 @@
 [![jare/vim-bundle:latest](https://badge.imagelayers.io/jare/vim-bundle:latest.svg)](https://imagelayers.io/?images=jare/vim-bundle:latest 'jare/vim-bundle:latest') - *uncompressed size*
 [![](http://i.imgur.com/G6KybVM.png)](http://i.imgur.com/G6KybVM.png) 
 
-#### [Also you might want to look at Vim/Emacs hybrid `jare/spacemacs` *(WIP)*](https://hub.docker.com/r/jare/spacemacs/)    [![](http://i.imgur.com/PjGF8iY.png)](http://i.imgur.com/PjGF8iY.png) 
+#### [Also you might want to look at Vim/Emacs hybrid `jare/spacemacs`](https://hub.docker.com/r/jare/spacemacs/)    [![](https://raw.githubusercontent.com/syl20bnr/spacemacs/master/doc/img/spacemacs-python.png)](https://raw.githubusercontent.com/syl20bnr/spacemacs/master/doc/img/spacemacs-python.png) 
 
 #### What's inside:
   - [`Alpine Linux`](http://www.alpinelinux.org/)
