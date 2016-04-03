@@ -1,11 +1,9 @@
 ## Remote Development Environment
 `jare/drop-in:latest`   
-[![jare/drop-in:latest](https://badge.imagelayers.io/jare/drop-in:latest.svg)](https://imagelayers.io/?images=jare/drop-in:latest 'jare/drop-in:latest')  *- uncompressed size*
 
 [![](http://i.imgur.com/RVTlBBO.png)](http://i.imgur.com/RVTlBBO.png)
 
 #### [Based on the `jare/vim-bundle:latest`](https://hub.docker.com/r/jare/vim-bundle/)   
-[![jare/vim-bundle:latest](https://badge.imagelayers.io/jare/vim-bundle:latest.svg)](https://imagelayers.io/?images=jare/vim-bundle:latest 'jare/vim-bundle:latest') - *uncompressed size*
 [![](http://i.imgur.com/G6KybVM.png)](http://i.imgur.com/G6KybVM.png) 
 
 #### [Also you might want to look at Vim/Emacs hybrid `jare/spacemacs`](https://hub.docker.com/r/jare/spacemacs/)    [![](https://raw.githubusercontent.com/syl20bnr/spacemacs/master/doc/img/spacemacs-python.png)](https://raw.githubusercontent.com/syl20bnr/spacemacs/master/doc/img/spacemacs-python.png) 
@@ -82,3 +80,6 @@ echo 'Done!'
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
   - *If Vim or Powerline doesn't look right in the tmux try `tmux -2` and make sure that client's `TERM` variable set to support 256 colors*  
   - *Don't forget to replace `ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys` in the [Dockerfile](https://hub.docker.com/r/jare/drop-in/~/dockerfile/) with your key or mount it `-v <your-key>:/home/developer/.ssh/authorized_keys`*
+
+
+ **Leave a comment if you found a bug or if you have a suggestion!**
