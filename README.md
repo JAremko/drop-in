@@ -13,7 +13,6 @@
   - [`Vim`](http://www.vim.org/) + a ton of awesome plugins *see [`jare/vim-bundle:latest`](https://hub.docker.com/r/jare/vim-bundle/)*
   - Good support of [`Golang`](https://golang.org/) and [`TypeScript`](http://www.typescriptlang.org/) development with [`jare/typescript`](https://hub.docker.com/r/jare/typescript/) and [`jare/go-tools`](https://hub.docker.com/r/jare/go-tools/) containers
   - [`tmux`](https://tmux.github.io/)
-  - [`Fish`](http://fishshell.com/)
   - [`powerline`](https://github.com/powerline/powerline)
   - [`Mosh`](https://mosh.mit.edu/)
   - Docker client for doing stuff with `-v /var/run/docker.sock:/var/run/docker.sock`
