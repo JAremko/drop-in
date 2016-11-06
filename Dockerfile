@@ -7,25 +7,18 @@ ENV HOME /home/developer
 
 COPY sshd_config /etc/ssh/sshd_config
 COPY init-vim.sh /tmp/init-vim.sh
-COPY .main.yaml  /home/developer/.main.yaml
 
 ADD https://github.com/jaremko.keys /home/developer/.ssh/authorized_keys
 
-RUN apk add --update libseccomp openrc                                                                     \
-      --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/main                          && \
-    apk add --update tmux git curl docker bash mosh-server htop python py-pip openssh python-tests         \
-      --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community                     && \
-
-    sed -i 's/0:0:root:\/root:\/bin\/ash/0:0:root:\/home\/developer:\/usr\/bin\/bash/g' /etc/passwd     && \
-
-    rm -rf /home/developer/bundle/vim-airline                                                           && \
-    pip install git+git://github.com/Lokaltog/powerline                                                 && \
-    echo "set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim/" >> /home/developer/.vimrc~ && \
-    pip install tmuxp                                                                                   && \
-    git clone https://github.com/tmux-plugins/tmux-yank.git /home/developer/.tmux/tmux-yank             && \
-    echo "set shell=/bin/bash" >> /home/developer/.vimrc~                                               && \
-    sh /tmp/init-vim.sh                                                                                 && \
-    sh /util/ocd-clean / 
+RUN apk add --update libseccomp openrc                                                            \
+      --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/main                 && \
+    apk add --update tmux git curl bash mosh-server htop python openssh                           \
+      --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community            && \
+    sed -i 's/0:0:root:\/root:\/bin\/ash/0:0:root:\/home\/developer:\/bin\/bash/g' /etc/passwd && \
+    git clone https://github.com/erikw/tmux-powerline.git /usr/lib/tmux-powerline              && \
+    git clone https://github.com/tmux-plugins/tmux-yank.git /home/developer/.tmux/tmux-yank    && \
+    echo "set shell=/bin/bash" >> /home/developer/.vimrc~                                      && \
+    sh /tmp/init-vim.sh
 
 COPY tmux.conf /home/developer/.tmux.conf
 
