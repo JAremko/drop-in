@@ -4,7 +4,7 @@ Port 62222
 Protocol 2
 AllowTcpForwarding yes
 RSAAuthentication yes
-AuthorizedKeysFile /home/developer/.ssh/authorized_keys
+AuthorizedKeysFile /etc/ssh_keys
 #SyslogFacility AUTHPRIV
 ChallengeResponseAuthentication no
 
@@ -12,7 +12,7 @@ Compression yes
 GatewayPorts yes
 LogLevel VERBOSE
 LoginGraceTime 50s
-PermitRootLogin yes
+PermitRootLogin no
 MaxAuthTries 6
 MaxStartups 10
 PasswordAuthentication no
