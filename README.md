@@ -11,7 +11,7 @@
 #### What's inside:
   - [`Alpine Linux`](http://www.alpinelinux.org/)
   - [`Vim`](http://www.vim.org/) + a ton of awesome plugins *see [`jare/vim-bundle:latest`](https://hub.docker.com/r/jare/vim-bundle/)*
-  - Good support of [`Golang`](https://golang.org/) development with [`jare/go-tools`](https://hub.docker.com/r/jare/go-tools/) containers
+  - Good support of [`Golang`](https://golang.org/) development with [`jare/go-tools`](https://hub.docker.com/r/jare/go-tools/) container
   - [`tmux`](https://tmux.github.io/)
   - [`tmux-powerline`](https://github.com/erikw/tmux-powerline.git)
   - [`Mosh`](https://mosh.mit.edu/)
