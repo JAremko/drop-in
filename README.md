@@ -18,7 +18,7 @@
   - OpenSSH, Bash, OMF, Python, etc.
 
 *The Tmux prefix is `C-q` other than that both Tmux and Vim binding are mostly default  [**tmux.conf**](https://github.com/JAremko/drop-in/blob/master/tmux.conf), [**.vimrc**](https://github.com/JAremko/alpine-vim/blob/master/.vimrc)*  
-*Make sure to use "Solarized Dark" compatible theme or colors palette may look weird.*  
+*Make sure to use "Solarized Dark" compatible theme or color palette may look weird.*  
 #### how to start the daemon(and all containers)
 ```sh
   docker create -v '/usr/lib/go' --name go-tools \
