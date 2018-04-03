@@ -6,12 +6,12 @@ USER root
 
 COPY sshd_config /etc/ssh/sshd_config
 COPY init-vim.sh /tmp/init-vim.sh
+COPY tmux.conf $UHOME/.tmux.conf
 
 RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" \
     >> /etc/apk/repositories \
     && echo "http://nl.alpinelinux.org/alpine/edge/community" \
     >> /etc/apk/repositories \
-# Deps
     && apk --no-cache add \
     bash \
     curl \
@@ -21,17 +21,14 @@ RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" \
     mosh-server \
     openrc \
     openssh \
-    python \
     tmux \
-    && git clone https://github.com/erikw/tmux-powerline.git \
-    /usr/lib/tmux-powerline \
+    py2-pip \
     && git clone https://github.com/tmux-plugins/tmux-yank.git \
     $UHOME/.tmux/tmux-yank \
+    && pip install powerline-status \
     && echo "set shell=/bin/bash" \
     >> $UHOME/.vimrc~ \
     && sh /tmp/init-vim.sh
-
-COPY tmux.conf $UHOME/.tmux.conf
 
 RUN rc-update add sshd \
     && rc-status \

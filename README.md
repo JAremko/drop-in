@@ -13,12 +13,13 @@
   - [`Vim`](http://www.vim.org/) + a ton of awesome plugins *see [`jare/vim-bundle:latest`](https://hub.docker.com/r/jare/vim-bundle/)*
   - Good support of [`Golang`](https://golang.org/) development with [`jare/go-tools`](https://hub.docker.com/r/jare/go-tools/) container
   - [`tmux`](https://tmux.github.io/)
-  - [`tmux-powerline`](https://github.com/erikw/tmux-powerline.git)
+  - [`powerline`](https://powerline.readthedocs.io)
   - [`Mosh`](https://mosh.mit.edu/)
   - OpenSSH, Bash, OMF, Python, etc.
 
-*The Tmux prefix is `C-q` other than that both Tmux and Vim binding are mostly default  [**tmux.conf**](https://github.com/JAremko/drop-in/blob/master/tmux.conf), [**.vimrc**](https://github.com/JAremko/alpine-vim/blob/master/.vimrc)*
-#### how to start the daemon*(and all containers)*
+*The Tmux prefix is `C-q` other than that both Tmux and Vim binding are mostly default  [**tmux.conf**](https://github.com/JAremko/drop-in/blob/master/tmux.conf), [**.vimrc**](https://github.com/JAremko/alpine-vim/blob/master/.vimrc)*  
+*Make sure to use "Solarized Dark" compatible theme or colors palette may look weird.*  
+#### how to start the daemon(and all containers)
 ```sh
   docker create -v '/usr/lib/go' --name go-tools \
   'jare/go-tools' '/bin/true'
@@ -33,6 +34,8 @@
   *`-v /etc/localtime:/etc/localtime:ro` - makes tmux display local time*
 #### how to connect:  
   `mosh --ssh="ssh -p 62222" -- developer@$<ip> tmux -u`
+#### or without host identity check:  
+  `mosh --ssh="ssh -o StrictHostKeyChecking=no -p 62222" -- developer@$<ip> tmux -u`
   
 #### Useful Bash scripts
 ###### **Connect**
